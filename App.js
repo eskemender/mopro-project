@@ -1,21 +1,44 @@
-import 'react-native-gesture-handler';
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Greeting from './Greeting';
+import Input from './Input';
+import Layout from './Layout';
+import List from './List';
+
+// class App extends Component {
+//   state = {
+//     greeting: 'Welcome'
+//   }
+
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         <Greeting text={this.state.greeting} />
+//         <Text>{this.state.greeting}</Text>
+//         <Input />
+//       </View>
+//     )
+//   }
+// }
 
 class App extends Component {
-  state = {
-    greeting: 'Selamat Datang! Halo'
-  }
+	constructor(){
+		super();
+		this.state = {
+			greeting: 'Welcome to React Native'
+		}
+	}
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Greeting text={this.state.greeting} />
-        <Text>{this.state.greeting}</Text>
-      </View>
-    )
-  }
+	componentDidMount(){
+
+	}
+
+	render(){
+		return(
+			// <Layout />
+			<List />
+			)
+	}
 }
 
 
